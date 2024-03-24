@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Trang Chủ | IHome Application</title>
+
+    <link th:href="@{/resources/front/images/favicon.png}" rel="icon" sizes="32x32" type="image/png">
+    <link rel="stylesheet" th:href="@{/resources/front/js/plugins/goodlayers-core/plugins/fontawesome/font-awesome.css}"
+          type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/js/plugins/goodlayers-core/plugins/fa5/fa5.css}"
+          type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/js/plugins/goodlayers-core/plugins/elegant/elegant-font.css}"
+          type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/js/plugins/goodlayers-core/plugins/ionicons/ionicons.css}"
+          type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/js/plugins/goodlayers-core/plugins/simpleline/simpleline.css}"
+          type="text/css"/>
+    <link rel="stylesheet"
+          th:href="@{/resources/front/js/plugins/goodlayers-core/plugins/gdlr-custom-icon/gdlr-custom-icon.css}"
+          type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/js/plugins/goodlayers-core/plugins/style.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/js/plugins/goodlayers-core/include/css/page-builder.css}"
+          type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/js/plugins/tourmaster/tourmaster.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/css/tourmaster-global-style-custom.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/js/plugins/tourmaster/room/tourmaster-room.css}"
+          type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/css/tourmaster-room-style-custom.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/css/style-core.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/css/hotale-style-custom.css}" type="text/css"/>
+
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Jost%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2Citalic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CAmiri%3Aregular%2Citalic%2C700%2C700italic%7CAllison%3Aregular&#038;subset=cyrillic%2Clatin%2Clatin-ext%2Carabic%2Cvietnamese&#038;ver=6.0.1"
+            type="text/css"
+    />
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Oswald%3A200%2C300%2Cregular%2C500%2C600%2C700%7CMerriweather%3A300%2C300italic%2Cregular%2Citalic%2C700%2C700italic%2C900%2C900italic%7CJost%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2Citalic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CAllison%3Aregular&#038;subset=cyrillic%2Ccyrillic-ext%2Clatin%2Clatin-ext%2Cvietnamese&#038;ver=6.0.1"
+            type="text/css"
+    />
+
+</head>
+
+<body
+        class="home page-template-default page page-id-15043 theme-hotale gdlr-core-body tourmaster-body woocommerce-no-js hotale-body hotale-body-front hotale-full hotale-with-sticky-navigation hotale-blockquote-style-3 gdlr-core-link-to-lightbox"
+        data-home-url="index.html"
+>
+
+<div th:replace="~{fragments/front/mobile :: mobile}"></div>
+
+<div class="hotale-body-outer-wrapper">
+    <div class="hotale-body-wrapper clearfix hotale-with-frame">
+
+        <div th:replace="~{fragments/front/header :: header}"></div>
+
+        <div class="hotale-page-wrapper" id="hotale-page-wrapper">
+            <div class="gdlr-core-page-builder-body">
+                <div class="gdlr-core-pbf-wrapper" style="padding: 150px 0px 30px 0px;" id="gdlr-core-wrapper-1">
+                    <div class="gdlr-core-pbf-background-wrap">
+                        <div
+                                class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js"
+                                style="background-image: url(https://demo.goodlayers.com/hotale/hotel2/wp-content/uploads/sites/5/2022/05/page-title-bg-2.jpg); background-size: cover; background-position: center;"
+                                data-parallax-speed="0"
+                        ></div>
+                    </div>
+                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js">
+                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                            <div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first"
+                                 id="gdlr-core-column-1">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js"
+                                     style="margin: 0px 40px 0px 40px;">
+                                    <div class="gdlr-core-pbf-background-wrap"></div>
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js">
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
+                                                <div class="gdlr-core-title-item-title-wrap">
+                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title class-test"
+                                                        style="font-size: 90px; font-weight: 500; letter-spacing: 0px; text-transform: none; color: #ffffff;">
+                                                        Tìm kiếm phòng trọ / nhà trọ phù hợp với bạn<span
+                                                            class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first"
+                                 data-skin="White Input" id="gdlr-core-column-3">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js"
+                                     style="padding: 0px 0px 65px 0px;">
+                                    <div class="gdlr-core-pbf-background-wrap"></div>
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js"
+                                         style="max-width: 1010px;">
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="tourmaster-room-search-item tourmaster-item-pdlr clearfix">
+                                                <form
+                                                        class="tourmaster-room-search-form tourmaster-radius-round tourmaster-style-text-top tourmaster-align-horizontal"
+                                                        th:action="@{/houses/search}" style="justify-content: center;"
+                                                        method="post"
+                                                >
+                                                    <div class="tourmaster-room-search-size10">
+                                                        <div class="tourmaster-room-date-selection tourmaster-horizontal"
+                                                             data-avail-date="">
+                                                            <div class="tourmaster-custom-start-date">
+                                                                <input type="text" name="search" style="border: 1.5px solid #dfdfdf;width: 350px; padding: 13px 20px; border-radius: 5px 0 0 5px; font-size: 12px; height: 47px;" placeholder="Từ khóa, Đường, Quận..."/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tourmaster-room-search-size4 tourmaster-room-search-submit-wrap">
+                                                        <input class="tourmaster-room-search-submit tourmaster-style-solid"
+                                                               type="submit" value="Tìm Kiếm"
+                                                               style="background: #c4975e; color: #ffffff;"/>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gdlr-core-pbf-wrapper" style="padding: 90px 0px 100px 0px;">
+                    <div class="gdlr-core-pbf-background-wrap">
+                        <div
+                                class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js"
+                                style="background-image: url(upload/hotel2-hotel-bg.png); background-repeat: no-repeat; background-position: center;"
+                                data-parallax-speed="0"
+                        ></div>
+                    </div>
+                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js">
+                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                            <div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first"
+                                 id="gdlr-core-column-4">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js"
+                                     style="padding: 0px 0px 80px 0px;">
+                                    <div class="gdlr-core-pbf-background-wrap"></div>
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js"
+                                         style="max-width: 770px;">
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
+                                                <div class="gdlr-core-title-item-title-wrap">
+                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title class-test"
+                                                        style="font-size: 34px; font-weight: 500; color: #222222;">
+                                                        Danh Sách Nhà Trọ Mới Đăng<span
+                                                            class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-divider-item gdlr-core-divider-item-normal gdlr-core-item-pdlr gdlr-core-center-align"
+                                                 style="margin-bottom: 40px;">
+                                                <div class="gdlr-core-divider-container" style="max-width: 70px;">
+                                                    <div
+                                                            class="gdlr-core-divider-line gdlr-core-skin-divider"
+                                                            style="border-color: #c4975e; border-width: 5px; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px;"
+                                                    ></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first"
+                                 id="gdlr-core-column-5">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js">
+                                    <div class="gdlr-core-pbf-background-wrap"></div>
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js">
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="tourmaster-room-item clearfix tourmaster-room-item-style-grid2">
+                                                <div class="gdlr-core-flexslider flexslider gdlr-core-js-2"
+                                                     data-type="carousel" data-column="3" data-move="1"
+                                                     data-nav="navigation-outer" data-nav-parent="self"
+                                                     data-vcenter-nav="1">
+                                                    <div class="gdlr-core-flexslider-custom-nav gdlr-core-style-navigation-outer gdlr-core-center-align"
+                                                         style="margin-top: -40px;">
+                                                        <i
+                                                                class="fa5s fa5-arrow-left flex-prev"
+                                                                style="
+                                                                    color: #9e9e9e;
+                                                                    background-color: #f6f6f6;
+                                                                    padding: 18px 18px 18px 18px;
+                                                                    border-radius: 5px;
+                                                                    -moz-border-radius: 5px;
+                                                                    -webkit-border-radius: 5px;
+                                                                    font-size: 15px;
+                                                                    left: -80px;
+                                                                "
+                                                        ></i>
+                                                        <i
+                                                                class="fa5s fa5-arrow-right flex-next"
+                                                                style="
+                                                                    color: #9e9e9e;
+                                                                    background-color: #f6f6f6;
+                                                                    padding: 18px 18px 18px 18px;
+                                                                    border-radius: 5px;
+                                                                    -moz-border-radius: 5px;
+                                                                    -webkit-border-radius: 5px;
+                                                                    font-size: 15px;
+                                                                    right: -80px;
+                                                                "
+                                                        ></i>
+                                                    </div>
+                                                    <ul class="slides">
+                                                        <li class="gdlr-core-item-mglr" th:each="item : ${houseDTOListNewest}">
+                                                            <div class="tourmaster-room-grid2 tourmaster-grid-frame">
+                                                                <div
+                                                                        class="tourmaster-room-grid-inner"
+                                                                        style="border-width: 1px 1px 1px 1px; border-color: #e5e5e5; border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px;"
+                                                                >
+                                                                    <div class="tourmaster-room-thumbnail tourmaster-media-image" style="display: flex; justify-content: center">
+                                                                        <a th:href="@{'/house-detail/' + ${item.id}}">
+                                                                            <img
+                                                                                    th:src="@{${item.avatar}}"
+                                                                                    style="width: 327px; height: 220px; object-fit: cover;"
+                                                                            />
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="tourmaster-room-content-wrap gdlr-core-skin-e-background gdlr-core-js"
+                                                                         data-sync-height="room-item-56">
+                                                                        <h3 class="tourmaster-room-title gdlr-core-skin-title"
+                                                                            style="font-size: 24px; font-weight: 500; letter-spacing: 0px; text-transform: uppercase;">
+                                                                            <a th:href="@{'/house-detail/' + ${item.id}}" th:text="${item.name}"
+                                                                               style="-webkit-line-clamp: 2;-webkit-box-orient: vertical; overflow: hidden; display: -webkit-box;"></a>
+                                                                        </h3>
+                                                                        <div class="tourmaster-bottom clearfix">
+                                                                            <div class="tourmaster-price-wrap tourmaster-no-bg">
+                                                                                <span class="tourmaster-price" th:text="${item.price + ' VNĐ'}" style="font-family: 'Josefin Sans', sans-serif; font-size: 16px; font-weight: 600; font-style: normal; margin-top: 0px; color: #ff6000"></span>
+                                                                            </div>
+                                                                            <a class="tourmaster-read-more tourmaster-type-button"
+                                                                               th:href="@{'/house-detail/' + ${item.id}}">Chi Tiết</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js">
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js">
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align"
+                                                 style="padding-bottom: 0px;">
+                                                <a
+                                                        class="gdlr-core-button gdlr-core-button-transparent gdlr-core-center-align gdlr-core-button-with-border"
+                                                        href="/houses"
+                                                        style="
+                                                            font-size: 18px;
+                                                            font-style: normal;
+                                                            font-weight: 500;
+                                                            letter-spacing: 0px;
+                                                            color: #c4975e;
+                                                            padding: 9px 33px 9px 33px;
+                                                            text-transform: uppercase;
+                                                            border-radius: 5px;
+                                                            -moz-border-radius: 5px;
+                                                            -webkit-border-radius: 5px;
+                                                            border-width: 2px 2px 2px 2px;
+                                                            border-color: #c4975e;
+                                                        "
+                                                >
+                                                    <span class="gdlr-core-content"><i
+                                                            class="gdlr-core-pos-left fa fa-star-o"
+                                                            style="font-size: 20px; color: #c4975e;"></i>Xem Tất Cả</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gdlr-core-pbf-wrapper" style="padding: 95px 0px 95px 0px;" id="gdlr-core-wrapper-2">
+                    <div class="gdlr-core-pbf-background-wrap">
+                        <div
+                                class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js"
+                                style="background-image: url(upload/about-bg.jpg); background-size: cover; background-position: center;"
+                                data-parallax-speed="0"
+                        ></div>
+                    </div>
+                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js">
+                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                            <div class="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first"
+                                 id="gdlr-core-column-6">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js"
+                                     style="margin: 0px 0px 0px 0px; padding: 60px 70px 0px 0px;">
+                                    <div class="gdlr-core-pbf-background-wrap"></div>
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js"
+                                         data-gdlr-animation="fadeInLeft" data-gdlr-animation-duration="600ms"
+                                         data-gdlr-animation-offset="0.8">
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
+                                                <div class="gdlr-core-title-item-title-wrap">
+                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title class-test"
+                                                        style="font-size: 30px; font-weight: 500; letter-spacing: 0px; color: #222222;">
+                                                        Offering a series of comfortable and lavish hotels &
+                                                        residences<span
+                                                            class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-divider-item gdlr-core-divider-item-normal gdlr-core-item-pdlr gdlr-core-left-align">
+                                                <div class="gdlr-core-divider-container" style="max-width: 70px;">
+                                                    <div
+                                                            class="gdlr-core-divider-line gdlr-core-skin-divider"
+                                                            style="border-color: #c4975e; border-width: 5px; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px;"
+                                                    ></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
+                                                <div class="gdlr-core-text-box-item-content"
+                                                     style="font-size: 16px; font-weight: 400; letter-spacing: 0px; text-transform: none; color: #94959b;">
+                                                    <p>All our hotels are fabulous, they are destinations unto
+                                                        themselves. We have crossed the globe to bring you only the
+                                                        best.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"
+                                                 style="padding-bottom: 0px;">
+                                                <a
+                                                        class="gdlr-core-button gdlr-core-button-solid gdlr-core-left-align gdlr-core-button-no-border"
+                                                        href="#"
+                                                        style="
+                                                            font-size: 15px;
+                                                            font-style: normal;
+                                                            font-weight: 500;
+                                                            letter-spacing: 0px;
+                                                            color: #ffffff;
+                                                            text-transform: uppercase;
+                                                            border-radius: 5px;
+                                                            -moz-border-radius: 5px;
+                                                            -webkit-border-radius: 5px;
+                                                            background: #c4975e;
+                                                        "
+                                                >
+                                                    <span class="gdlr-core-content">Learn More</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gdlr-core-pbf-column gdlr-core-column-30" id="gdlr-core-column-7">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js">
+                                    <div class="gdlr-core-pbf-background-wrap"></div>
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js"
+                                         data-gdlr-animation="fadeInRight" data-gdlr-animation-duration="600ms"
+                                         data-gdlr-animation-offset="0.8">
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-image-item gdlr-core-item-pdb gdlr-core-center-align gdlr-core-item-pdlr"
+                                                 style="padding-bottom: 0px;">
+                                                <div class="gdlr-core-image-item-wrap gdlr-core-media-image gdlr-core-image-item-style-rectangle"
+                                                     style="border-width: 0px; max-width: 570px;">
+                                                    <img th:src="@{/resources/front/images/hotel2-right-img.jpg}" alt="" width="570"
+                                                         height="450" title="hotel2-right-img"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gdlr-core-pbf-wrapper" style="padding: 120px 0px 90px 0px;" id="gdlr-core-wrapper-4">
+                    <div class="gdlr-core-pbf-background-wrap">
+                        <div
+                                class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js"
+                                style="background-image: url(upload/unique-universe-bg.jpg); background-repeat: no-repeat; background-position: center;"
+                                data-parallax-speed="0"
+                        ></div>
+                    </div>
+                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js">
+                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                            <div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first"
+                                 id="gdlr-core-column-11">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js"
+                                     style="padding: 0;">
+                                    <div class="gdlr-core-pbf-background-wrap"></div>
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js"
+                                         style="max-width: 770px;">
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
+                                                <div class="gdlr-core-title-item-title-wrap">
+                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title class-test"
+                                                        style="font-size: 30px; font-weight: 500; letter-spacing: 0px; color: #222222;">
+                                                        A unique universe, from unmatched ocean views to culinary
+                                                        experiences<span
+                                                            class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-divider-item gdlr-core-divider-item-normal gdlr-core-item-pdlr gdlr-core-center-align"
+                                                 style="margin-bottom: 35px;">
+                                                <div class="gdlr-core-divider-container" style="max-width: 70px;">
+                                                    <div
+                                                            class="gdlr-core-divider-line gdlr-core-skin-divider"
+                                                            style="border-color: #c4975e; border-width: 5px; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px;"
+                                                    ></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first"
+                                 id="gdlr-core-column-12">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js"
+                                     style="padding: 0px 0px 80px 0px;">
+                                    <div class="gdlr-core-pbf-background-wrap"></div>
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js"
+                                         style="max-width: 570px;">
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align"
+                                                 style="padding-bottom: 0px;">
+                                                <div class="gdlr-core-text-box-item-content"
+                                                     style="font-size: 16px; font-weight: 400; text-transform: none; color: #94959b;">
+                                                    <p>Our luxury rooms and suites combine elegant design with the
+                                                        simple beauty of a tropical hideout.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gdlr-core-pbf-column gdlr-core-column-20 gdlr-core-column-first"
+                                 id="gdlr-core-column-13">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js">
+                                    <div class="gdlr-core-pbf-background-wrap"></div>
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js"
+                                         style="max-width: 320px;" data-gdlr-animation="fadeInUp"
+                                         data-gdlr-animation-duration="600ms" data-gdlr-animation-offset="0.8">
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-image-item gdlr-core-item-pdb gdlr-core-center-align gdlr-core-item-pdlr">
+                                                <div class="gdlr-core-image-item-wrap gdlr-core-media-image gdlr-core-image-item-style-rectangle"
+                                                     style="border-width: 0px;">
+                                                    <img th:src="@{/resources/front/images/hotel-2-icon-1.png}" alt="" width="39" height="70"
+                                                         title="hotel-2-icon-1"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr"
+                                                 style="padding-bottom: 20px;">
+                                                <div class="gdlr-core-title-item-title-wrap">
+                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title class-test"
+                                                        style="font-size: 24px; font-weight: 500; color: #222222;">
+                                                        rooms & suites<span
+                                                            class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align"
+                                                 style="padding-bottom: 0px;">
+                                                <div class="gdlr-core-text-box-item-content"
+                                                     style="font-size: 16px; font-weight: 400; text-transform: none; color: #94959b;">
+                                                    <p>All our hotels are fabulous, they are destinations unto
+                                                        themselves.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gdlr-core-pbf-column gdlr-core-column-20" id="gdlr-core-column-14">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js">
+                                    <div class="gdlr-core-pbf-background-wrap"></div>
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js"
+                                         style="max-width: 320px;" data-gdlr-animation="fadeInDown"
+                                         data-gdlr-animation-duration="600ms" data-gdlr-animation-offset="0.8">
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-image-item gdlr-core-item-pdb gdlr-core-center-align gdlr-core-item-pdlr">
+                                                <div class="gdlr-core-image-item-wrap gdlr-core-media-image gdlr-core-image-item-style-rectangle"
+                                                     style="border-width: 0px;">
+                                                    <img th:src="@{/resources/front/images/hotel-2-icon-2.png}" alt="" width="65" height="65"
+                                                         title="hotel-2-icon-2"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr"
+                                                 style="padding-bottom: 20px;">
+                                                <div class="gdlr-core-title-item-title-wrap">
+                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title class-test"
+                                                        style="font-size: 24px; font-weight: 500; color: #222222;">
+                                                        events & exhibitions<span
+                                                            class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align"
+                                                 style="padding-bottom: 0px;">
+                                                <div class="gdlr-core-text-box-item-content"
+                                                     style="font-size: 16px; font-weight: 400; text-transform: none; color: #94959b;">
+                                                    <p>All our hotels are fabulous, they are destinations unto
+                                                        themselves.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gdlr-core-pbf-column gdlr-core-column-20" id="gdlr-core-column-15">
+                                <div class="gdlr-core-pbf-column-content-margin gdlr-core-js">
+                                    <div class="gdlr-core-pbf-background-wrap"></div>
+                                    <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js"
+                                         style="max-width: 320px;" data-gdlr-animation="fadeInUp"
+                                         data-gdlr-animation-duration="600ms" data-gdlr-animation-offset="0.8">
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-image-item gdlr-core-item-pdb gdlr-core-center-align gdlr-core-item-pdlr">
+                                                <div class="gdlr-core-image-item-wrap gdlr-core-media-image gdlr-core-image-item-style-rectangle"
+                                                     style="border-width: 0px;">
+                                                    <img th:src="@{/resources/front/images/hotel-2-icon-2.png}" alt="" width="63" height="71"
+                                                         title="hotel-2-icon-3"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr"
+                                                 style="padding-bottom: 20px;">
+                                                <div class="gdlr-core-title-item-title-wrap">
+                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title class-test"
+                                                        style="font-size: 24px; font-weight: 500; color: #222222;">
+                                                        Style & Comfort<span
+                                                            class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="gdlr-core-pbf-element">
+                                            <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align"
+                                                 style="padding-bottom: 0px;">
+                                                <div class="gdlr-core-text-box-item-content"
+                                                     style="font-size: 16px; font-weight: 400; text-transform: none; color: #94959b;">
+                                                    <p>All our hotels are fabulous, they are destinations unto
+                                                        themselves.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div th:replace="~{fragments/front/footer :: footer}"></div>
+
+    </div>
+</div>
+
+<script type="text/javascript" th:src="@{/resources/front/js/jquery.min.js}" id="jquery-core-js"></script>
+<script type="text/javascript" th:src="@{/resources/front/js/jquery-migrate.min.js}" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="snazzymaps-js-js-extra">
+    /* <![CDATA[ */
+    var SnazzyDataForSnazzyMaps = [];
+    SnazzyDataForSnazzyMaps = {
+        id: 15,
+        name: "Subtle Grayscale",
+        description: "A nice, simple grayscale version of the map with color extremes that are never too harsh on the eyes. Originally created for http:\/\/barvinssurvins.fr\/situer.",
+        url: "https:\/\/snazzymaps.com\/style\/15\/subtle-grayscale",
+        imageUrl: "https:\/\/snazzy-maps-cdn.azureedge.net\/assets\/15-subtle-grayscale.png?v=20170626083535",
+        json:
+            '[{"featureType":"administrative","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","elementType":"all","stylers":[{"saturation":-100},{"lightness":"50"},{"visibility":"simplified"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"lightness":"30"}]},{"featureType":"road.local","elementType":"all","stylers":[{"lightness":"40"}]},{"featureType":"transit","elementType":"all","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]},{"featureType":"water","elementType":"labels","stylers":[{"lightness":-25},{"saturation":-100}]}]',
+        views: 1006718,
+        favorites: 2583,
+        createdBy: { name: "Paulo Avila", url: null },
+        createdOn: "2013-10-30T16:37:24.593",
+        tags: ["greyscale", "light"],
+        colors: ["gray", "white"],
+    };
+    /* ]]> */
+</script>
+
+<script type="text/javascript" th:src="@{/resources/front/js/ui/core.min.js}" id="jquery-ui-core-js"></script>
+<script type="text/javascript" th:src="@{/resources/front/js/ui/datepicker.min.js}"
+        id="jquery-ui-datepicker-js"></script>
+<script type="text/javascript" id="jquery-ui-datepicker-js-after">
+    jQuery(function (jQuery) {
+        jQuery.datepicker.setDefaults({
+            closeText: "Close",
+            currentText: "Today",
+            monthNames: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            monthNamesShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            nextText: "Next",
+            prevText: "Previous",
+            dayNames: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            dayNamesShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+            dayNamesMin: ["S", "M", "T", "W", "T", "F", "S"],
+            dateFormat: "M d, yy",
+            firstDay: 1,
+            isRTL: false,
+        });
+    });
+</script>
+<script type="text/javascript" th:src="@{/resources/front/js/ui/effect.min.js}" id="jquery-effects-core-js"></script>
+<script type="text/javascript" id="tourmaster-script-js-extra">
+    /* <![CDATA[ */
+    var TMi18n = {
+        closeText: "Done",
+        currentText: "Today",
+        monthNames: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        monthNamesShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        dayNames: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        dayNamesShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+        dayNamesMin: ["S", "M", "T", "W", "T", "F", "S"],
+        firstDay: "1",
+    };
+    /* ]]> */
+</script>
+<script type="text/javascript" th:src="@{/resources/front/js/plugins/tourmaster/tourmaster.js}"
+        id="tourmaster-script-js"></script>
+<script type="text/javascript" th:src="@{/resources/front/js/plugins/tourmaster/room/tourmaster-room.js}"
+        id="tourmaster-room-script-js"></script>
+<script type="text/javascript" th:src="@{/resources/front/js/plugins/jquery.mmenu.js}"
+        id="hotale-jquery-mmenu-js"></script>
+<script type="text/javascript" th:src="@{/resources/front/js/plugins/jquery.superfish.js}"
+        id="hotale-jquery-superfish-js"></script>
+<script type="text/javascript" th:src="@{/resources/front/js/plugins/script-core.js}"
+        id="hotale-script-core-js"></script>
+<script type="text/javascript" th:src="@{/resources/front/js/plugins/jquery.flexslider-min.js}"></script>
+<script type="text/javascript" th:src="@{/resources/front/js/plugins/goodlayers-core/plugins/script.js}"
+        id="gdlr-core-plugin-js"></script>
+<script type="text/javascript" id="gdlr-core-page-builder-js-extra">
+    /* <![CDATA[ */
+    var gdlr_core_pbf = { admin: "", video: { width: "640", height: "360" }, ajax_url: "#" };
+    /* ]]> */
+</script>
+<script type="text/javascript" th:src="@{/resources/front/js/plugins/goodlayers-core/include/js/page-builder.js}"
+        id="gdlr-core-page-builder-js"></script>
+</body>
+</html>

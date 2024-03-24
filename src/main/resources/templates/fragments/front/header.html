@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div th:fragment="header">
+    <div class="hotale-top-bar">
+        <div class="hotale-top-bar-background"></div>
+        <div class="hotale-top-bar-container hotale-top-bar-full">
+            <div class="hotale-top-bar-container-inner clearfix">
+                <div class="hotale-top-bar-left hotale-item-pdlr">
+                    <div class="hotale-top-bar-left-text">
+                        <a href="#" style="color: #94959b;font-size: 16px;">ihome@gmail.com</a> <span
+                            style="margin-left: 20px; color: #c4975e;">0123-456-789</span>
+                    </div>
+                </div>
+                <div class="hotale-top-bar-right hotale-item-pdlr">
+                    <div class="hotale-top-bar-right-social">
+                        <a href="#" target="_blank" class="hotale-top-bar-social-icon" title="facebook"><i
+                                class="fa5b fa5-facebook"></i></a>
+                        <a href="#" target="_blank" class="hotale-top-bar-social-icon" title="pinterest"><i
+                                class="fa5b fa5-pinterest-p"></i></a>
+                        <a href="#" target="_blank" class="hotale-top-bar-social-icon" title="twitter"><i
+                                class="fa5b fa5-twitter"></i></a>
+                        <a href="#" target="_blank" class="hotale-top-bar-social-icon" title="instagram"><i
+                                class="fa5b fa5-instagram"></i></a>
+                    </div>
+                    <div class="tourmaster-user-top-bar tourmaster-guest tourmaster-style-2" >
+                        <a href="/login" class="tourmaster-user-top-bar-login" th:if="${userLogin == null}">
+                            <span class="tourmaster-text">Đăng Nhập</span>
+                        </a>
+                        <a href="/logout" class="tourmaster-user-top-bar-login" th:if="${userLogin != null}">
+                            <span class="tourmaster-text">Đăng Xuất</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="hotale-header-wrap hotale-header-style-plain hotale-style-center-menu hotale-sticky-navigation hotale-style-fixed"
+            data-navigation-offset="75">
+        <div class="hotale-header-background"></div>
+        <div class="hotale-header-container hotale-header-full">
+            <div class="hotale-header-container-inner clearfix">
+                <div class="hotale-logo hotale-item-pdlr">
+                    <div class="hotale-logo-inner">
+                        <a class="hotale-fixed-nav-logo" href="/home">
+                            <img th:src="@{/resources/front/images/logo-hotel2x2.png}" alt=""  width="116" height="27"
+                                 title="logo-hotel2x1" />
+                        </a>
+                        <a class="hotale-orig-logo" href="/home">
+                            <img th:src="@{/resources/front/images/logo-hotel2x2.png}" alt=""
+                                 width="116" height="27" title="logo-hotel2x1" />
+                        </a>
+                    </div>
+                </div>
+                <div class="hotale-navigation hotale-item-pdlr clearfix">
+                    <div class="hotale-main-menu" id="hotale-main-menu">
+                        <ul id="menu-main-navigation-1" class="sf-menu">
+                            <li class="menu-item hotale-normal-menu"
+                                th:classappend="${requestURI.contains('/home') ? 'current-menu-item' : ''}">
+                                <a href="/home" class="sf-with-ul-pre">Trang Chủ</a>
+                            </li>
+                            <li class="menu-item hotale-normal-menu"
+                                th:classappend="${requestURI.contains('/about') ? 'current-menu-item' : ''}">
+                                <a href="/about" class="sf-with-ul-pre">Giới Thiệu</a>
+                            </li>
+                            <li class="menu-item hotale-normal-menu"
+                                th:classappend="${requestURI.contains('/houses') ? 'current-menu-item' : ''}">
+                                <a href="/houses" class="sf-with-ul-pre">Nhà Trọ</a>
+                            </li>
+                            <li class="menu-item hotale-normal-menu"
+                                th:classappend="${requestURI.contains('/contact') ? 'current-menu-item' : ''}">
+                                <a href="/contact">Liên Hệ</a>
+                            </li>
+                        </ul>
+                        <div class="hotale-navigation-slide-bar hotale-navigation-slide-bar-style-dot"
+                             id="hotale-navigation-slide-bar"></div>
+                    </div>
+                    <div class="hotale-main-menu-right-wrap clearfix hotale-item-mglr hotale-navigation-top" th:if="${userLogin != null}">
+                        <div class="tourmaster-room-navigation-checkout-wrap">
+                            <a id="tourmaster-room-navigation-checkout-button"
+                                    class="tourmaster-room-navigation-checkout-button"
+                                    href="/front/account" th:text="${userLogin.fullName}"
+                            > </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- hotale-navigation -->
+            </div>
+            <!-- hotale-header-inner -->
+        </div>
+        <!-- hotale-header-container -->
+    </header>
+</div>
+
+</body>
+</html>
