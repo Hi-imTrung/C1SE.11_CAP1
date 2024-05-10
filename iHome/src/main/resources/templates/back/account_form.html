@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tài Khoản | IHome Application</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" th:href="@{/resources/back/plugins/fontawesome-free/css/all.min.css}">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css}">
+    <!-- DataTables -->
+    <link rel="stylesheet" th:href="@{/resources/back/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css}">
+    <link rel="stylesheet" th:href="@{/resources/back/plugins/datatables-responsive/css/responsive.bootstrap4.min.css}">
+    <link rel="stylesheet" th:href="@{/resources/back/plugins/datatables-buttons/css/buttons.bootstrap4.min.css}">
+    <!-- Theme style -->
+    <link rel="stylesheet" th:href="@{/resources/back/dist/css/adminlte.min.css}">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" th:href="@{/resources/back/plugins/overlayScrollbars/css/OverlayScrollbars.min.css}">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+    <div th:replace="~{fragments/back/header :: header}"></div>
+
+    <div th:replace="~{fragments/back/sidebar :: sidebar}"></div>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">Chỉnh Sửa Tài Khoản</h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="/">Tổng Quan</a></li>
+                            <li class="breadcrumb-item active">Tài Khoản</li>
+                        </ol>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- left column -->
+                    <div class="col-12">
+                        <!-- general form elements -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Chỉnh Sửa Tài Khoản</h3>
+                            </div>
+                            <form id="quickForm" method="post"
+                                  th:action="@{/back/account/form}"
+                                  th:object="${accountDTO}"
+                            >
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div
+                                                class="alert alert-dismissible col-md-12"
+                                                th:if="${messageDTO != null && messageDTO.key == 'save'}"
+                                                th:classappend="${messageDTO.status == 'success' ? 'alert-success' : 'alert-warning'}"
+                                        >
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                                                &times;
+                                            </button>
+                                            <h5><i class="icon fas fa-exclamation-triangle"></i> Thông Báo</h5>
+                                            <span th:text="${messageDTO.message}"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="inputId">Mã Tài Khoản</label>
+                                                <input type="text" class="form-control" id="inputId"
+                                                       placeholder="Địa Chỉ Email"
+                                                       th:classappend="${#fields.hasErrors('id')} ? 'is-invalid' : ''"
+                                                       name="id" th:field="*{id}" disabled
+                                                >
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputEmail">Địa Chỉ Email</label>
+                                                <input type="email" class="form-control" id="inputEmail"
+                                                       placeholder="Địa Chỉ Email"
+                                                       name="email" th:field="*{email}" disabled
+                                                >
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="status">Trạng Thái</label>
+                                                <select id="status" class="form-control select2"
+                                                        th:field="*{status}"
+                                                >
+                                                    <option value="true">Kích Hoạt</option>
+                                                    <option value="false">Tạm Ngưng</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="inputFullName">Họ & Tên <code>(*)</code></label>
+                                                <input type="text" class="form-control" id="inputFullName"
+                                                       placeholder="Họ & Tên"
+                                                       th:classappend="${#fields.hasErrors('fullName')} ? 'is-invalid' : ''"
+                                                       name="fullName" th:field="*{fullName}"
+                                                >
+                                                <p class="text-danger"
+                                                   th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}"
+                                                ></p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPhone">Số Điện Thoại <code>(*)</code></label>
+                                                <input type="text" class="form-control" id="inputPhone"
+                                                       placeholder="Số Điện Thoại"
+                                                       th:classappend="${#fields.hasErrors('phone')} ? 'is-invalid' : ''"
+                                                       name="phone" th:field="*{phone}"
+                                                >
+                                                <p class="text-danger"
+                                                   th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"
+                                                ></p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="role">Vai Trò</label>
+                                                <select id="role" class="form-control select2"
+                                                        th:field="*{roleName}"
+                                                >
+                                                    <option value="TENANT">Người Thuê Nhà</option>
+                                                    <option value="LANDLORD">Chủ Trọ</option>
+                                                    <option value="ADMIN">Quản Trị Viên</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+
+                                <div class="card-footer">
+                                    <input type="hidden" name="id" th:field="*{id}">
+                                    <input type="hidden" name="email" th:field="*{email}">
+                                    <button type="submit" class="btn btn-primary">Lưu Dữ Liệu</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--/.col (left) -->
+                </div>
+                <!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+
+    <div th:replace="~{fragments/back/footer :: footer}"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script th:src="@{/resources/back/plugins/jquery/jquery.min.js}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script th:src="@{/resources/back/plugins/jquery-ui/jquery-ui.min.js}"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+    $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script th:src="@{/resources/back/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<!-- DataTables  & Plugins -->
+<script th:src="@{/resources/back/plugins/datatables/jquery.dataTables.min.js}"></script>
+<script th:src="@{/resources/back/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js}"></script>
+<script th:src="@{/resources/back/plugins/datatables-responsive/js/dataTables.responsive.min.js}"></script>
+<script th:src="@{/resources/back/plugins/datatables-responsive/js/responsive.bootstrap4.min.js}"></script>
+<script th:src="@{/resources/back/plugins/datatables-buttons/js/dataTables.buttons.min.js}"></script>
+<script th:src="@{/resources/back/plugins/datatables-buttons/js/buttons.bootstrap4.min.js}"></script>
+<script th:src="@{/resources/back/plugins/jszip/jszip.min.js}"></script>
+<script th:src="@{/resources/back/plugins/pdfmake/pdfmake.min.js}"></script>
+<script th:src="@{/resources/back/plugins/pdfmake/vfs_fonts.js}"></script>
+<script th:src="@{/resources/back/plugins/datatables-buttons/js/buttons.html5.min.js}"></script>
+<script th:src="@{/resources/back/plugins/datatables-buttons/js/buttons.print.min.js}"></script>
+<script th:src="@{/resources/back/plugins/datatables-buttons/js/buttons.colVis.min.js}"></script>
+<!-- AdminLTE App -->
+<script th:src="@{/resources/back/dist/js/adminlte.min.js}"></script>
+<!-- Page specific script -->
+<script>
+    $(function () {
+      $("#example1").DataTable({
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+        "buttons": ["copy", "csv", "excel", "pdf", "print"]
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    });
+</script>
+</body>
+</html>
