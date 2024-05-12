@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=bill-width, initial-scale=1">
+    <title>Hóa Đơn | IHome Application</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" th:href="@{/resources/back/plugins/fontawesome-free/css/all.min.css}">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css}">
+    <!-- DataTables -->
+    <link rel="stylesheet" th:href="@{/resources/back/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css}">
+    <link rel="stylesheet" th:href="@{/resources/back/plugins/datatables-responsive/css/responsive.bootstrap4.min.css}">
+    <link rel="stylesheet" th:href="@{/resources/back/plugins/datatables-buttons/css/buttons.bootstrap4.min.css}">
+    <!-- Theme style -->
+    <link rel="stylesheet" th:href="@{/resources/back/dist/css/adminlte.min.css}">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" th:href="@{/resources/back/plugins/overlayScrollbars/css/OverlayScrollbars.min.css}">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+    <div th:replace="~{fragments/back/header :: header}"></div>
+
+    <div th:replace="~{fragments/back/sidebar :: sidebar}"></div>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0">Danh Sách Hóa Đơn</h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="/">Tổng Quan</a></li>
+                            <li class="breadcrumb-item active">Hóa Đơn</li>
+                        </ol>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Danh Sách Hóa Đơn</h3>
+                                <div class="card-tools">
+                                    <a type="button" class="btn btn-block btn-primary" href="/back/bill/form">Thêm Mới</a>
+                                </div>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>#ID</th>
+                                        <th>Tên Hóa Đơn</th>
+                                        <th>Nhà Trọ</th>
+                                        <th>Giá Tiền</th>
+                                        <th>Loại</th>
+                                        <th>Tùy Chọn</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr th:each="item : ${billDTOList}">
+                                        <td th:text="${item.id}"></td>
+                                        <td th:text="${item.title}"></td>
+                                        <td th:text="${item.houseDTO.name}"></td>
+                                        <td th:text="${item.price} + ' VNĐ'"></td>
+                                        <td th:switch="${item.type}">
+                                            <span class="badge bg-primary" th:case="WATER">Nước</span>
+                                            <span class="badge bg-warning" th:case="ELECTRICITY">Điện</span>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-primary btn-sm"
+                                               th:href="@{'/back/bill/form/' + ${item.id}}">
+                                                <i class="fas fa-eye"></i>
+                                                Xem
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <th>#ID</th>
+                                        <th>Tên Hóa Đơn</th>
+                                        <th>Nhà Trọ</th>
+                                        <th>Giá Tiền</th>
+                                        <th>Loại</th>
+                                        <th>Tùy Chọn</th>
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+
+    <div th:replace="~{fragments/back/footer :: footer}"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script th:src="@{/resources/back/plugins/jquery/jquery.min.js}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script th:src="@{/resources/back/plugins/jquery-ui/jquery-ui.min.js}"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+    $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script th:src="@{/resources/back/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<!-- DataTables  & Plugins -->
+<script th:src="@{/resources/back/plugins/datatables/jquery.dataTables.min.js}"></script>
+<script th:src="@{/resources/back/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js}"></script>
+<script th:src="@{/resources/back/plugins/datatables-responsive/js/dataTables.responsive.min.js}"></script>
+<script th:src="@{/resources/back/plugins/datatables-responsive/js/responsive.bootstrap4.min.js}"></script>
+<script th:src="@{/resources/back/plugins/datatables-buttons/js/dataTables.buttons.min.js}"></script>
+<script th:src="@{/resources/back/plugins/datatables-buttons/js/buttons.bootstrap4.min.js}"></script>
+<script th:src="@{/resources/back/plugins/jszip/jszip.min.js}"></script>
+<script th:src="@{/resources/back/plugins/pdfmake/pdfmake.min.js}"></script>
+<script th:src="@{/resources/back/plugins/pdfmake/vfs_fonts.js}"></script>
+<script th:src="@{/resources/back/plugins/datatables-buttons/js/buttons.html5.min.js}"></script>
+<script th:src="@{/resources/back/plugins/datatables-buttons/js/buttons.print.min.js}"></script>
+<script th:src="@{/resources/back/plugins/datatables-buttons/js/buttons.colVis.min.js}"></script>
+<!-- AdminLTE App -->
+<script th:src="@{/resources/back/dist/js/adminlte.min.js}"></script>
+<!-- Page specific script -->
+<script>
+    $(function () {
+      $("#example1").DataTable({
+        "responsive": true, "lengthChange": false, "autoWidth": false,
+        "buttons": ["copy", "csv", "excel", "pdf", "print"]
+      }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Nhà Trọ | IHome Application</title>
+
+    <link th:href="@{/resources/front/images/favicon.png}" rel="icon" sizes="32x32" type="image/png">
+    <link rel="stylesheet" th:href="@{/resources/front/js/plugins/goodlayers-core/plugins/fontawesome/font-awesome.css}"
+          type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/js/plugins/goodlayers-core/plugins/fa5/fa5.css}"
+          type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/js/plugins/goodlayers-core/plugins/elegant/elegant-font.css}"
+          type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/js/plugins/goodlayers-core/plugins/ionicons/ionicons.css}"
+          type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/js/plugins/goodlayers-core/plugins/simpleline/simpleline.css}"
+          type="text/css"/>
+    <link rel="stylesheet"
+          th:href="@{/resources/front/js/plugins/goodlayers-core/plugins/gdlr-custom-icon/gdlr-custom-icon.css}"
+          type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/js/plugins/goodlayers-core/plugins/style.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/js/plugins/goodlayers-core/include/css/page-builder.css}"
+          type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/js/plugins/tourmaster/tourmaster.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/css/tourmaster-global-style-custom.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/js/plugins/tourmaster/room/tourmaster-room.css}"
+          type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/css/tourmaster-room-style-custom.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/css/style-core.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/css/hotale-style-custom.css}" type="text/css"/>
+
+    <link rel="stylesheet" th:href="@{/resources/front/css/bootstrap.min.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/css/default.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/css/style.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/resources/front/css/responsive.css}" type="text/css"/>
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Jost%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2Citalic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CAmiri%3Aregular%2Citalic%2C700%2C700italic%7CAllison%3Aregular&#038;subset=cyrillic%2Clatin%2Clatin-ext%2Carabic%2Cvietnamese&#038;ver=6.0.1"
+            type="text/css"
+    />
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Oswald%3A200%2C300%2Cregular%2C500%2C600%2C700%7CMerriweather%3A300%2C300italic%2Cregular%2Citalic%2C700%2C700italic%2C900%2C900italic%7CJost%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C800%2C900%2C100italic%2C200italic%2C300italic%2Citalic%2C500italic%2C600italic%2C700italic%2C800italic%2C900italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CAllison%3Aregular&#038;subset=cyrillic%2Ccyrillic-ext%2Clatin%2Clatin-ext%2Cvietnamese&#038;ver=6.0.1"
+            type="text/css"
+    />
+
+    <style>
+        .pagination-wrap ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            background: #f6f3f1;
+            padding: 5px 15px 5px;
+        }
+        li {
+            list-style: none;
+        }
+        .pagination-wrap ul li {
+            margin: 10px 2.5px;
+        }
+        .pagination-wrap ul li.prev {
+            margin-right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .pagination-wrap ul li.next {
+            margin-left: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .pagination-wrap ul li a {
+            display: block;
+            height: 40px;
+            width: 40px;
+            line-height: 42px;
+            text-align: center;
+            background: transparent;
+            border-radius: 50%;
+            color: #696969;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 600;
+        }
+        .pagination-wrap ul li a:hover, .pagination-wrap ul li.active a {
+            background: #c4975e;
+            color: #fff;
+        }
+
+        .pagination-wrap ul li.prev a:hover, .pagination-wrap ul li.next a:hover {
+            background: transparent;
+            color: #ff6000;
+        }
+
+        .tourmaster-room-rating-text {
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body
+        class="home page-template-default page page-id-15043 theme-hotale gdlr-core-body tourmaster-body woocommerce-no-js hotale-body hotale-body-front hotale-full hotale-with-sticky-navigation hotale-blockquote-style-3 gdlr-core-link-to-lightbox"
+        data-home-url="index.html"
+>
+
+<div th:replace="~{fragments/front/mobile :: mobile}"></div>
+
+<div class="hotale-body-outer-wrapper">
+    <div class="hotale-body-wrapper clearfix hotale-with-frame">
+
+        <div th:replace="~{fragments/front/header :: header}"></div>
+
+        <!--  Banner  -->
+        <div class="hotale-page-title-wrap hotale-style-custom hotale-center-align">
+            <div class="hotale-header-transparent-substitute"></div>
+            <div class="hotale-page-title-overlay"></div>
+            <div class="hotale-page-title-container hotale-container">
+                <div class="hotale-page-title-content hotale-item-pdlr"><h1 class="hotale-page-title">Danh Sách Nhà
+                    Trọ</h1></div>
+            </div>
+        </div>
+
+        <div class="shop-area gray-bg pt-100 pb-50 pr-50 pl-50">
+            <div class="custom-container-two">
+                <div class="row justify-content-center">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6" th:each="item : ${houseDTOList}">
+                                <div class="exclusive-item exclusive-item-three text-center mb-50">
+                                    <div class="exclusive-item-thumb">
+                                        <a th:href="@{'/house-detail/' + ${item.id}}">
+                                            <img th:src="@{${item.avatar}}" alt=""
+                                                 style="width: 327px; height: 220px; object-fit: cover;">
+                                        </a>
+                                    </div>
+                                    <div class="exclusive-item-content" style="text-align: left">
+                                        <h5><a th:href="@{'/house-detail/' + ${item.id}}" th:text="${item.name}"
+                                               style="-webkit-line-clamp: 2;-webkit-box-orient: vertical; overflow: hidden; display: -webkit-box;"></a>
+                                        </h5>
+                                        <div class="exclusive--item--price">
+                                            <span class="new-price pl-2" th:text="${item.price + ' VNĐ'}"></span>
+                                        </div>
+
+                                        <div class="exclusive--item--price">
+                                            <span class="new-price" style="color: #000"
+                                                  th:text="${'Người Đăng: ' + item.ownerDTO.fullName}"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination-wrap mb-50">
+            <th:block th:if="${totalPage > 1 AND search != null}">
+                <ul th:with="pageURLPrefix = '/houses' + '?search=' + ${search} + '&page=' ">
+                    <li class="prev" th:classappend="${currentPage > 1 ? '' : 'disabled'}">
+                        <a th:href="@{${pageURLPrefix}} + ${currentPage - 1}">Prev</a>
+                    </li>
+
+                    <th:block th:each="index : ${#numbers.sequence(1, totalPage)}">
+                        <li th:classappend="${currentPage == index ? 'active' : ''}">
+                            <a th:href="@{${pageURLPrefix}} + ${index}" th:text="${index}"></a>
+                        </li>
+                    </th:block>
+
+                    <li class="next" th:classappend="${currentPage < totalPage ? '' : 'disabled'}">
+                        <a th:href="@{${pageURLPrefix}} + ${currentPage + 1}">Next</a>
+                    </li>
+                </ul>
+            </th:block>
+
+            <th:block th:if="${totalPage > 1 AND search == null}">
+                <ul th:with="pageURLPrefix = '/houses' + '?page=' ">
+                    <li class="prev" th:classappend="${currentPage > 1 ? '' : 'disabled'}">
+                        <a th:href="@{${pageURLPrefix}} + ${currentPage - 1}">Prev</a>
+                    </li>
+
+                    <th:block th:each="index : ${#numbers.sequence(1, totalPage)}">
+                        <li th:classappend="${currentPage == index ? 'active' : ''}">
+                            <a th:href="@{${pageURLPrefix}} + ${index}" th:text="${index}"></a>
+                        </li>
+                    </th:block>
+
+                    <li class="next" th:classappend="${currentPage < totalPage ? '' : 'disabled'}">
+                        <a th:href="@{${pageURLPrefix}} + ${currentPage + 1}">Next</a>
+                    </li>
+                </ul>
+            </th:block>
+
+        </div>
+
+        <div th:replace="~{fragments/front/footer :: footer}"></div>
+
+    </div>
+</div>
+
+<script type="text/javascript" th:src="@{/resources/front/js/ljquery.min.js}" id="jquery-core-js"></script>
+<script type="text/javascript" th:src="@{/resources/front/js/jquery-migrate.min.js}" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="snazzymaps-js-js-extra">
+    /* <![CDATA[ */
+    var SnazzyDataForSnazzyMaps = [];
+    SnazzyDataForSnazzyMaps = {
+        id: 15,
+        name: "Subtle Grayscale",
+        description: "A nice, simple grayscale version of the map with color extremes that are never too harsh on the eyes. Originally created for http:\/\/barvinssurvins.fr\/situer.",
+        url: "https:\/\/snazzymaps.com\/style\/15\/subtle-grayscale",
+        imageUrl: "https:\/\/snazzy-maps-cdn.azureedge.net\/assets\/15-subtle-grayscale.png?v=20170626083535",
+        json:
+            '[{"featureType":"administrative","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"all","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","elementType":"all","stylers":[{"saturation":-100},{"lightness":"50"},{"visibility":"simplified"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":"-100"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"all","stylers":[{"lightness":"30"}]},{"featureType":"road.local","elementType":"all","stylers":[{"lightness":"40"}]},{"featureType":"transit","elementType":"all","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]},{"featureType":"water","elementType":"labels","stylers":[{"lightness":-25},{"saturation":-100}]}]',
+        views: 1006718,
+        favorites: 2583,
+        createdBy: { name: "Paulo Avila", url: null },
+        createdOn: "2013-10-30T16:37:24.593",
+        tags: ["greyscale", "light"],
+        colors: ["gray", "white"],
+    };
+    /* ]]> */
+</script>
+
+<script type="text/javascript" th:src="@{/resources/front/js/ui/core.min.js}" id="jquery-ui-core-js"></script>
+<script type="text/javascript" th:src="@{/resources/front/js/ui/datepicker.min.js}"
+        id="jquery-ui-datepicker-js"></script>
+<script type="text/javascript" id="jquery-ui-datepicker-js-after">
+    jQuery(function (jQuery) {
+        jQuery.datepicker.setDefaults({
+            closeText: "Close",
+            currentText: "Today",
+            monthNames: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            monthNamesShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            nextText: "Next",
+            prevText: "Previous",
+            dayNames: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            dayNamesShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+            dayNamesMin: ["S", "M", "T", "W", "T", "F", "S"],
+            dateFormat: "M d, yy",
+            firstDay: 1,
+            isRTL: false,
+        });
+    });
+</script>
+<script type="text/javascript" th:src="@{/resources/front/js/ui/effect.min.js}" id="jquery-effects-core-js"></script>
+<script type="text/javascript" id="tourmaster-script-js-extra">
+    /* <![CDATA[ */
+    var TMi18n = {
+        closeText: "Done",
+        currentText: "Today",
+        monthNames: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        monthNamesShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        dayNames: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        dayNamesShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+        dayNamesMin: ["S", "M", "T", "W", "T", "F", "S"],
+        firstDay: "1",
+    };
+    /* ]]> */
+</script>
+<script type="text/javascript" th:src="@{/resources/front/js/plugins/tourmaster/tourmaster.js}"
+        id="tourmaster-script-js"></script>
+<script type="text/javascript" th:src="@{/resources/front/js/plugins/tourmaster/room/tourmaster-room.js}"
+        id="tourmaster-room-script-js"></script>
+<script type="text/javascript" th:src="@{/resources/front/js/plugins/jquery.mmenu.js}"
+        id="hotale-jquery-mmenu-js"></script>
+<script type="text/javascript" th:src="@{/resources/front/js/plugins/jquery.superfish.js}"
+        id="hotale-jquery-superfish-js"></script>
+<script type="text/javascript" th:src="@{/resources/front/js/plugins/script-core.js}"
+        id="hotale-script-core-js"></script>
+<script type="text/javascript" th:src="@{/resources/front/js/plugins/jquery.flexslider-min.js}"></script>
+<script type="text/javascript" th:src="@{/resources/front/js/plugins/goodlayers-core/plugins/script.js}"
+        id="gdlr-core-plugin-js"></script>
+<script type="text/javascript" id="gdlr-core-page-builder-js-extra">
+    /* <![CDATA[ */
+    var gdlr_core_pbf = { admin: "", video: { width: "640", height: "360" }, ajax_url: "#" };
+    /* ]]> */
+</script>
+<script type="text/javascript" th:src="@{/resources/front/js/plugins/goodlayers-core/include/js/page-builder.js}"
+        id="gdlr-core-page-builder-js"></script>
+</body>
+</html>
